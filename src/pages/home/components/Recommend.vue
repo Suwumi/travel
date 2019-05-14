@@ -4,7 +4,7 @@
         <ul>
             <li
                 class="item border-bottom"
-                v-for="item of recommendList"
+                v-for="item of list"
                 :key="item.id">
                 <img class="item-img" :src="item.imgUrl" />
                 <div class="item-info">
@@ -21,28 +21,8 @@
 
 export default {
     name: 'HomeRecommend',
-    data () {
-        return{
-            recommendList: [{
-                id: '0001',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/1e/1e51b5ea32ee8033a3.water.jpg_200x200_7750aa0b.jpg',
-                title: '深圳欢乐谷',
-                desc: '深圳欢乐，谷深圳欢乐谷深圳欢乐谷'
-            },
-            {
-                id: '0002',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-                title: '东部华侨城大峡谷',
-                desc: '东部华侨城，大峡谷东部华侨城大峡谷'
-            },
-            {
-                id: '0003',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1902/f2/f2e0213052717f7ca3.water.jpg_200x200_816c1b48.jpg',
-                title: '世界之窗',
-                desc: '世界之窗世界，之窗世界之窗世界之窗'
-            },
-            ]
-        }
+    props: {
+        list : Array
     }
 }
 </script>
