@@ -2,7 +2,7 @@
     <ul class="list">
         <li class="item"
             v-for="item of cities"
-            :key="key"
+            :key="item.initial"
             :ref="item.initial"
             @touchstart="touchStart"
             @touchmove="touchMove"
